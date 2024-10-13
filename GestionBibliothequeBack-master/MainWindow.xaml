@@ -1,0 +1,91 @@
+﻿<Window x:Class="GestionBiblio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:GestionBiblio"
+        mc:Ignorable="d"
+        Height="800" Width="1200" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" ResizeMode="NoResize" Background="{x:Null}" AllowsTransparency="True" Loaded="Window_Loaded" >
+    <Grid>
+        <materialDesign:Card Margin="10" UniformCornerRadius="15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="15*" />
+                </Grid.ColumnDefinitions>
+                <Grid.Resources>
+                    <Style TargetType="materialDesign:PackIcon">
+                        <Setter Property="Width" Value="30"></Setter>
+                        <Setter Property="Height" Value="30"></Setter>
+                    </Style>
+                </Grid.Resources>
+                <Grid Grid.Column="0">
+                    <ListView Margin="0 15">
+                        <ListViewItem HorizontalAlignment="Center" Margin="0 10">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
+                             BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="Button_Dashboard">
+                                <StackPanel Margin="-5">
+                                    <materialDesign:PackIcon Kind="MonitorDashboard"/>
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                        <ListViewItem HorizontalAlignment="Center" Margin="0">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
+                             BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="Button_Livres">
+                                <StackPanel Margin="-5">
+                                    <materialDesign:PackIcon Kind="Book"/>
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                        <ListViewItem Margin="0" Height="89">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
+                                BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="Button_LivresRes">
+                                <StackPanel Margin="5">
+                                    <materialDesign:PackIcon Kind="BookAdd"/>
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                        <ListViewItem Margin="0 10" Height="78">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
+                             BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="Button_Adherants">
+                                <StackPanel Margin="-5">
+                                    <materialDesign:PackIcon Kind="AccountGroup"/>
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                        <ListViewItem HorizontalAlignment="Center" Margin="0">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
+                             BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="Button_Employe">
+                                <StackPanel Margin="-5">
+                                    <materialDesign:PackIcon Kind="Account"/>
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                        <ListViewItem HorizontalAlignment="Center" Margin="0 10">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
+                             BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="Button_Auteurs">
+                                <StackPanel Margin="-5">
+                                    <materialDesign:PackIcon Kind="BadgeAccountOutline"/>
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                        <ListViewItem HorizontalAlignment="Center" Margin="0 60 0 0">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
+                             BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="btnExit" Click="btnExit_Click">
+                                <StackPanel Margin="-5">
+                                    <materialDesign:PackIcon Kind="ExitToApp"/>
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                    </ListView>
+                </Grid>
+                <Grid Grid.Column="1" Background="#F6F5F8" Name="RenderPages">
+
+                </Grid>
+            </Grid>
+        </materialDesign:Card>
+
+    </Grid>
+</Window>
